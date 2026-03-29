@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Interactive Form</title>
+
+<style>
+body{
+font-family: Arial;
+text-align: center;
+margin-top: 50px;
+}
+
+input{
+padding:8px;
+margin:10px;
+}
+
+button{
+padding:8px 15px;
+}
+
+#message{
+margin-top:15px;
+font-weight:bold;
+}
+</style>
+
+</head>
+
+<body>
+
+<h2>User Form</h2>
+
+<form onsubmit="return validateForm()">
+
+<input type="text" id="name" placeholder="Enter your name"><br>
+
+<input type="email" id="email" placeholder="Enter your email"><br>
+
+<button type="submit">Submit</button>
+
+</form>
+
+<p id="message"></p>
+
+<script>
+
+function validateForm(){
+
+let name = document.getElementById("name").value;
+let email = document.getElementById("email").value;
+
+if(name == "" || email == ""){
+document.getElementById("message").innerHTML = "❌ Please fill all fields";
+document.getElementById("message").style.color = "red";
+return false;
+}
+
+else{
+document.getElementById("message").innerHTML = "✅ Form submitted successfully!";
+document.getElementById("message").style.color = "green";
+return false;
+}
+
+}
+
+</script>
+
+</body>
+</html>

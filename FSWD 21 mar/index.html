@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Listing UI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>🛍 Product Store</h1>
+
+    <!-- Filters -->
+    <div class="filters">
+        <select id="categoryFilter">
+            <option value="all">All Categories</option>
+            <option value="electronics">Electronics</option>
+            <option value="fashion">Fashion</option>
+        </select>
+
+        <select id="priceFilter">
+            <option value="all">All Prices</option>
+            <option value="low">Below ₹500</option>
+            <option value="mid">₹500 - ₹1000</option>
+            <option value="high">Above ₹1000</option>
+        </select>
+    </div>
+
+    <!-- Product List -->
+    <div id="productContainer" class="grid"></div>
+
+    <script src="products.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

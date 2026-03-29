@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Manager</title>
+</head>
+
+<body>
+
+    <h2>Student Manager</h2>
+
+    <script>
+        // Store student details using objects inside an array
+        let students = [
+            { name: "Aishwarya K K", marks: [99, 97, 90] },
+            { name: "Chandu ", marks: [98, 95, 89] }
+        ];
+
+        // Loop through students
+        students.forEach(student => {
+
+            let total = 0;
+
+            // Add marks
+            student.marks.forEach(mark => {
+                total = total + mark;
+            });
+
+            // Calculate average
+            let average = total / student.marks.length;
+
+            // Display result
+            document.write("Name: " + student.name + "<br>");
+            document.write("Marks: " + student.marks + "<br>");
+            document.write("Average: " + average + "<br><br>");
+        });
+    </script>
+
+</body>
+</html>
